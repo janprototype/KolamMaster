@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kolam Master - Coming Soon</title>
+    <title>KalaHub - Kolam Master Coming Soon</title>
     <style>
         * {
             margin: 0;
@@ -22,7 +22,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -59,6 +59,12 @@
         .logo {
             font-size: 48px;
             margin-bottom: 10px;
+            animation: gentle-bounce 3s ease-in-out infinite;
+        }
+
+        @keyframes gentle-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .header h1 {
@@ -66,14 +72,34 @@
             margin-bottom: 10px;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
         }
 
+        /* ===== LEVEL 1 CX: ANIMATED PULSE ON TAGLINE ===== */
         .tagline {
             font-size: 18px;
             opacity: 0.95;
             font-weight: 300;
             letter-spacing: 1px;
+            line-height: 1.6;
+            animation: pulse-glow 2.5s ease-in-out infinite;
+            border-radius: 12px;
+            padding: 20px 15px;
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.05);
         }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+                transform: scale(1.02);
+            }
+        }
+        /* ===== END LEVEL 1 CX PULSE ===== */
 
         .content {
             padding: 60px 40px;
@@ -82,6 +108,19 @@
         .countdown-section {
             text-align: center;
             margin-bottom: 50px;
+            opacity: 0;
+            animation: fade-in 0.8s ease-out 0.3s forwards;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .countdown-label {
@@ -107,14 +146,19 @@
             border-radius: 10px;
             border: 2px solid #d4a574;
             min-width: 80px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
+        /* ===== LEVEL 1 CX: SMOOTH COUNTDOWN TRANSITIONS ===== */
         .countdown-number {
             font-size: 32px;
             font-weight: 700;
             color: #8b6f47;
             display: block;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            min-height: 40px;
         }
+        /* ===== END SMOOTH TRANSITIONS ===== */
 
         .countdown-label-small {
             font-size: 12px;
@@ -133,7 +177,14 @@
 
         .feature {
             text-align: center;
+            opacity: 0;
+            animation: fade-in 0.8s ease-out forwards;
         }
+
+        .feature:nth-child(1) { animation-delay: 0.5s; }
+        .feature:nth-child(2) { animation-delay: 0.6s; }
+        .feature:nth-child(3) { animation-delay: 0.7s; }
+        .feature:nth-child(4) { animation-delay: 0.8s; }
 
         .feature-icon {
             font-size: 40px;
@@ -159,6 +210,8 @@
             border-radius: 15px;
             margin-bottom: 30px;
             border-left: 5px solid #d4a574;
+            opacity: 0;
+            animation: fade-in 0.8s ease-out 0.9s forwards;
         }
 
         .form-title {
@@ -174,47 +227,9 @@
             margin-bottom: 20px;
         }
 
-        .form-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        input[type="email"] {
-            flex: 1;
-            padding: 12px 16px;
-            border: 2px solid #d4a574;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: all 0.3s ease;
-        }
-
-        input[type="email"]:focus {
-            outline: none;
-            border-color: #8b6f47;
-            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
-        }
-
-        button {
-            padding: 12px 30px;
-            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(139, 111, 71, 0.3);
-        }
-
-        button:active {
-            transform: translateY(0);
+        iframe {
+            width: 100% !important;
+            border-radius: 8px !important;
         }
 
         .social-links {
@@ -237,6 +252,7 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .social-icon {
@@ -260,33 +276,55 @@
             transform: translateY(-3px);
         }
 
-        .success-message {
-            display: none;
-            background: #d4edda;
-            border: 2px solid #28a745;
-            color: #155724;
-            padding: 15px;
-            border-radius: 8px;
+        .footer-note {
             text-align: center;
-            margin-bottom: 20px;
-            font-weight: 500;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #999;
         }
 
-        .success-message.show {
-            display: block;
-            animation: slideIn 0.3s ease;
+        /* ===== LEVEL 1 CX: STICKY BUTTON ===== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            font-weight: 600;
+            font-size: 14px;
+            z-index: 999;
+            animation: bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transition: all 0.3s ease;
         }
 
-        @keyframes slideIn {
-            from {
+        .sticky-cta:hover {
+            transform: scale(1.08);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .sticky-cta:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes bounce-in {
+            0% {
                 opacity: 0;
-                transform: translateY(-10px);
+                transform: scale(0);
             }
-            to {
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
                 opacity: 1;
-                transform: translateY(0);
+                transform: scale(1);
             }
         }
+        /* ===== END STICKY BUTTON ===== */
 
         @media (max-width: 600px) {
             .header {
@@ -319,23 +357,14 @@
                 font-size: 24px;
             }
 
-            .form-group {
-                flex-direction: column;
+            /* ===== MOBILE STICKY BUTTON ===== */
+            .sticky-cta {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 20px;
+                font-size: 12px;
             }
-
-            button {
-                width: 100%;
-            }
-        }
-
-        .wave {
-            animation: wave 2s ease-in-out infinite;
-        }
-
-        @keyframes wave {
-            0%, 100% { transform: rotate(0deg); }
-            25% { transform: rotate(20deg); }
-            75% { transform: rotate(-20deg); }
+            /* ===== END MOBILE BUTTON ===== */
         }
     </style>
 </head>
@@ -344,16 +373,15 @@
         <div class="header">
             <div class="pattern-bg"></div>
             <div class="header-content">
-                <div class="logo wave">🌼</div>
+                <div class="logo">🌼</div>
                 <h1>KOLAM MASTER</h1>
-                <p class="tagline">"Revive a 5,000-Year-Old Art Form 🌼
-Master Kolam in Minutes, Not Years"</p>
+                <p class="tagline">Revive a 5,000-Year-Old Art Form 🌼<br>Master Kolam in Minutes, Not Years</p>
             </div>
         </div>
 
         <div class="content">
             <div class="countdown-section">
-                <div class="countdown-label">🚀 Coming Soon</div>
+                <div class="countdown-label">🚀 Launching Soon</div>
                 <div class="countdown-timer">
                     <div class="countdown-item">
                         <span class="countdown-number" id="days">00</span>
@@ -416,15 +444,34 @@ Master Kolam in Minutes, Not Years"</p>
                     <a href="https://youtube.com" class="social-icon" title="YouTube">▶</a>
                 </div>
             </div>
+
+            <div class="footer-note">
+                <p>Hosted on GitHub Pages | Powered by Google Forms</p>
+                <p style="margin-top: 10px;">Questions? Follow us on social media</p>
+            </div>
         </div>
     </div>
 
+    <!-- ===== LEVEL 1 CX: STICKY BUTTON HTML ===== -->
+    <button class="sticky-cta" onclick="scrollToForm()">
+        🔔 Notify Me
+    </button>
+    <!-- ===== END STICKY BUTTON ===== -->
+
     <script>
-        // Countdown Timer
+        // ===== LEVEL 1 CX: STICKY BUTTON SCROLL FUNCTION =====
+        function scrollToForm() {
+            const form = document.querySelector('.form-section');
+            form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Add a subtle highlight effect
+            form.style.borderLeftColor = '#c9945a';
+        }
+        // ===== END SCROLL FUNCTION =====
+
+        // ===== COUNTDOWN TIMER WITH SMOOTH TRANSITIONS =====
         function startCountdown() {
-            // Change this to your launch date (format: "Month Day, Year Hour:Minute:Second")
-            // Example: "January 15, 2026 10:00:00"
-            const launchDate = new Date("March 1, 2026 10:00:00").getTime();
+            // UPDATE THIS DATE TO YOUR LAUNCH DATE
+            const launchDate = new Date("December 16, 2025 10:00:00").getTime();
 
             function updateCountdown() {
                 const now = new Date().getTime();
@@ -443,43 +490,31 @@ Master Kolam in Minutes, Not Years"</p>
                 const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-                document.getElementById('days').textContent = String(days).padStart(2, '0');
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+                // Update with smooth transitions
+                updateDisplay('days', days);
+                updateDisplay('hours', hours);
+                updateDisplay('minutes', minutes);
+                updateDisplay('seconds', seconds);
+            }
+
+            function updateDisplay(id, value) {
+                const element = document.getElementById(id);
+                const formatted = String(value).padStart(2, '0');
+                
+                if (element.textContent !== formatted) {
+                    element.style.opacity = '0.5';
+                    element.style.transform = 'scale(0.8)';
+                    
+                    setTimeout(() => {
+                        element.textContent = formatted;
+                        element.style.opacity = '1';
+                        element.style.transform = 'scale(1)';
+                    }, 200);
+                }
             }
 
             updateCountdown();
             setInterval(updateCountdown, 1000);
-        }
-
-        // Email Form Handler
-        function handleSubmit(event) {
-            event.preventDefault();
-            
-            const email = document.getElementById('emailInput').value;
-            const successMessage = document.getElementById('successMessage');
-            
-            // Store email in localStorage (or send to your backend)
-            let emails = JSON.parse(localStorage.getItem('kolamMasterEmails') || '[]');
-            if (!emails.includes(email)) {
-                emails.push(email);
-                localStorage.setItem('kolamMasterEmails', JSON.stringify(emails));
-            }
-
-            // Show success message
-            successMessage.classList.add('show');
-            document.getElementById('emailForm').reset();
-
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                successMessage.classList.remove('show');
-            }, 5000);
-
-            // Optional: Send to backend/email service
-            // You can replace this with your actual backend endpoint
-            console.log('Email captured:', email);
-            console.log('Total emails:', emails.length);
         }
 
         // Initialize on page load
