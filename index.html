@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +49,7 @@
             right: 0;
             bottom: 0;
             opacity: 0.1;
-            background-image: 
+            background-image:
                 radial-gradient(circle at 20% 50%, white 1px, transparent 1px),
                 radial-gradient(circle at 80% 80%, white 1px, transparent 1px);
             background-size: 40px 40px;
@@ -59,9 +60,17 @@
 
         /* ===== LEVEL 3 CX: PARALLAX ANIMATION ===== */
         @keyframes parallax-subtle {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
+
         /* ===== END PARALLAX ANIMATION ===== */
 
         .header-content {
@@ -76,8 +85,15 @@
         }
 
         @keyframes gentle-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .header h1 {
@@ -102,10 +118,13 @@
         }
 
         @keyframes pulse-glow {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
                 transform: scale(1);
             }
+
             50% {
                 box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
                 transform: scale(1.02);
@@ -144,6 +163,7 @@
                 opacity: 0;
                 transform: translateX(400px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -155,6 +175,7 @@
                 opacity: 1;
                 transform: translateX(0);
             }
+
             to {
                 opacity: 0;
                 transform: translateX(400px);
@@ -164,6 +185,7 @@
         .social-proof.hide {
             animation: slide-out-right 0.5s ease-out forwards;
         }
+
         /* ===== END SOCIAL PROOF ===== */
 
         .countdown-section {
@@ -178,6 +200,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -215,9 +238,17 @@
 
         /* ===== LEVEL 3 CX: COLOR SHIFT ANIMATION ===== */
         @keyframes color-shift {
-            0%, 100% { border-color: #d4a574; }
-            50% { border-color: #c9945a; }
+
+            0%,
+            100% {
+                border-color: #d4a574;
+            }
+
+            50% {
+                border-color: #c9945a;
+            }
         }
+
         /* ===== END COLOR SHIFT ===== */
 
         .countdown-number {
@@ -254,10 +285,21 @@
             /* ===== END FEATURE HOVER ===== */
         }
 
-        .feature:nth-child(1) { animation-delay: 0.5s; }
-        .feature:nth-child(2) { animation-delay: 0.6s; }
-        .feature:nth-child(3) { animation-delay: 0.7s; }
-        .feature:nth-child(4) { animation-delay: 0.8s; }
+        .feature:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+
+        .feature:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .feature:nth-child(3) {
+            animation-delay: 0.7s;
+        }
+
+        .feature:nth-child(4) {
+            animation-delay: 0.8s;
+        }
 
         /* ===== LEVEL 3 CX: FEATURE CARD LIFT ON HOVER ===== */
         .feature:hover {
@@ -267,6 +309,7 @@
         .feature:hover .feature-icon {
             transform: scale(1.2);
         }
+
         /* ===== END FEATURE HOVER ===== */
 
         .feature-icon {
@@ -323,6 +366,7 @@
         iframe:focus {
             box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2);
         }
+
         /* ===== END FORM FOCUS ===== */
 
         .social-links {
@@ -376,6 +420,17 @@
             color: #999;
         }
 
+        .footer-note a {
+            color: #8b6f47;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-note a:hover {
+            color: #d4a574;
+            text-decoration: underline;
+        }
+
         .sticky-cta {
             position: fixed;
             bottom: 30px;
@@ -408,9 +463,11 @@
                 opacity: 0;
                 transform: scale(0);
             }
+
             50% {
                 transform: scale(1.1);
             }
+
             100% {
                 opacity: 1;
                 transform: scale(1);
@@ -462,10 +519,12 @@
                 left: 10px;
                 font-size: 12px;
             }
+
             /* ===== END MOBILE SOCIAL PROOF ===== */
         }
     </style>
 </head>
+
 <body>
     <!-- ===== LEVEL 3 CX: SOCIAL PROOF NOTIFICATION ===== -->
     <div class="social-proof" id="socialProof">
@@ -479,7 +538,8 @@
             <div class="header-content">
                 <div class="logo">🌼</div>
                 <h1>KOLAM MASTER</h1>
-                <p class="tagline">Ancient Art Meets AI Learning 🚀<br>Revive a 5,000-Year-Old Art Form 🌼<br>Master Kolam in Minutes, Not Years</p>
+                <p class="tagline">Ancient Art Meets AI Learning 🚀<br>Revive a 5,000-Year-Old Art Form 🌼<br>Master
+                    Kolam in Minutes, Not Years</p>
             </div>
         </div>
 
@@ -532,10 +592,12 @@
             <div class="form-section">
                 <div class="form-title">Be the First to Know 🎉</div>
                 <div class="form-subtitle">Join our community and get early access to Kolam Master</div>
-                
+
                 <!-- ===== PASTE YOUR GOOGLE FORM IFRAME CODE BELOW ===== -->
                 <!-- Replace the src URL with your actual Google Form embed code -->
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdOf24NXtEnwXlUMWh6NX_Kd47LkcVv8XLtcW7ziYjZuS9GeQ/viewform?embedded=true" width="640" height="451" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSdOf24NXtEnwXlUMWh6NX_Kd47LkcVv8XLtcW7ziYjZuS9GeQ/viewform?embedded=true"
+                    width="640" height="451" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 <!-- ===== END GOOGLE FORM ===== -->
             </div>
 
@@ -549,7 +611,12 @@
                 </div>
             </div>
 
-            <div class="footer-note">                
+            <div class="footer-note">
+                <p>&copy; 2025 Kolam Master. All rights reserved.</p>
+                <p style="margin-top: 10px;">
+                    <a href="privacy-policy.html">Privacy Policy</a> |
+                    <a href="terms-and-conditions.html">Terms & Conditions</a>
+                </p>
                 <p style="margin-top: 10px;">Questions? Follow us on social media</p>
             </div>
         </div>
@@ -564,7 +631,7 @@
         const jsConfetti = new JSConfetti();
 
         // Detect form submission
-        document.addEventListener('submit', function(e) {
+        document.addEventListener('submit', function (e) {
             // Check if it's within the iframe (can't directly detect iframe submit)
             // So we'll use a workaround - trigger confetti on form interactions
         });
@@ -579,7 +646,7 @@
         }
 
         // Trigger celebration when user scrolls to form
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const formSection = document.querySelector('.form-section');
             const rect = formSection.getBoundingClientRect();
             if (rect.top < window.innerHeight * 0.5 && !window.celebrationTriggered) {
@@ -599,7 +666,7 @@
             const form = document.querySelector('.form-section');
             form.scrollIntoView({ behavior: 'smooth', block: 'center' });
             form.style.borderLeftColor = '#c9945a';
-            
+
             // ===== TRIGGER CONFETTI ON BUTTON CLICK ===== 
             jsConfetti.addConfetti({
                 confettiRadius: 5,
@@ -613,25 +680,25 @@
         // ===== LEVEL 3 CX: SOCIAL PROOF NOTIFICATIONS =====
         function showSocialProof() {
             const names = [
-                'Uma', 'Raj', 'Guru', 'Krishna', 'Priya', 'Arjun', 
+                'Uma', 'Raj', 'Guru', 'Krishna', 'Priya', 'Arjun',
                 'Maya', 'Dev', 'Ravi', 'Neha', 'Vikram', 'Anjali'
             ];
-            
+
             function displayRandomProof() {
                 const proofElement = document.getElementById('socialProof');
                 const randomName = names[Math.floor(Math.random() * names.length)];
-                
+
                 proofElement.classList.remove('hide');
                 proofElement.classList.add('show');
                 document.getElementById('proofText').textContent = `${randomName} just signed up!`;
-                
+
                 // Hide after 5 seconds
                 setTimeout(() => {
                     proofElement.classList.add('hide');
                     proofElement.classList.remove('show');
                 }, 5000);
             }
-            
+
             // Show proof every 15-20 seconds
             displayRandomProof();
             setInterval(() => {
@@ -647,10 +714,10 @@
             // When form comes into view, add hover effect class
             const iframes = document.querySelectorAll('iframe');
             iframes.forEach(iframe => {
-                iframe.addEventListener('mouseover', function() {
+                iframe.addEventListener('mouseover', function () {
                     this.style.boxShadow = '0 0 0 4px rgba(212, 165, 116, 0.3)';
                 });
-                iframe.addEventListener('mouseout', function() {
+                iframe.addEventListener('mouseout', function () {
                     this.style.boxShadow = 'none';
                 });
             });
@@ -687,11 +754,11 @@
             function updateDisplay(id, value) {
                 const element = document.getElementById(id);
                 const formatted = String(value).padStart(2, '0');
-                
+
                 if (element.textContent !== formatted) {
                     element.style.opacity = '0.5';
                     element.style.transform = 'scale(0.8)';
-                    
+
                     setTimeout(() => {
                         element.textContent = formatted;
                         element.style.opacity = '1';
@@ -705,11 +772,12 @@
         }
 
         // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             startCountdown();
             showSocialProof();
             setupFormMicroInteractions();
         });
     </script>
 </body>
+
 </html>
