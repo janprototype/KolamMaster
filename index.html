@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KalaHub - Kolam Master Coming Soon</title>
+    <!-- ===== LEVEL 3 CX: CONFETTI LIBRARY ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@0.10.2/dist/js-confetti.browser.js"></script>
+    <!-- ===== END CONFETTI LIBRARY ===== -->
     <style>
         * {
             margin: 0;
@@ -49,7 +52,17 @@
                 radial-gradient(circle at 20% 50%, white 1px, transparent 1px),
                 radial-gradient(circle at 80% 80%, white 1px, transparent 1px);
             background-size: 40px 40px;
+            /* ===== LEVEL 3 CX: PARALLAX BACKGROUND ===== */
+            animation: parallax-subtle 20s ease-in-out infinite;
+            /* ===== END PARALLAX ===== */
         }
+
+        /* ===== LEVEL 3 CX: PARALLAX ANIMATION ===== */
+        @keyframes parallax-subtle {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        /* ===== END PARALLAX ANIMATION ===== */
 
         .header-content {
             position: relative;
@@ -75,7 +88,6 @@
             letter-spacing: 2px;
         }
 
-        /* ===== LEVEL 1 CX: ANIMATED PULSE ON TAGLINE ===== */
         .tagline {
             font-size: 18px;
             opacity: 0.95;
@@ -99,11 +111,60 @@
                 transform: scale(1.02);
             }
         }
-        /* ===== END LEVEL 1 CX PULSE ===== */
 
         .content {
             padding: 60px 40px;
         }
+
+        /* ===== LEVEL 3 CX: SOCIAL PROOF NOTIFICATION ===== */
+        .social-proof {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border: 2px solid #d4a574;
+            border-radius: 10px;
+            padding: 15px 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            font-size: 13px;
+            color: #2c3e50;
+            font-weight: 600;
+            z-index: 998;
+            animation: slide-in-right 0.5s ease-out;
+            display: none;
+        }
+
+        .social-proof.show {
+            display: block;
+            animation: slide-in-right 0.5s ease-out;
+        }
+
+        @keyframes slide-in-right {
+            from {
+                opacity: 0;
+                transform: translateX(400px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slide-out-right {
+            from {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(400px);
+            }
+        }
+
+        .social-proof.hide {
+            animation: slide-out-right 0.5s ease-out forwards;
+        }
+        /* ===== END SOCIAL PROOF ===== */
 
         .countdown-section {
             text-align: center;
@@ -147,9 +208,18 @@
             border: 2px solid #d4a574;
             min-width: 80px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* ===== LEVEL 3 CX: COLOR TRANSITION ===== */
+            animation: color-shift 6s ease-in-out infinite;
+            /* ===== END COLOR TRANSITION ===== */
         }
 
-        /* ===== LEVEL 1 CX: SMOOTH COUNTDOWN TRANSITIONS ===== */
+        /* ===== LEVEL 3 CX: COLOR SHIFT ANIMATION ===== */
+        @keyframes color-shift {
+            0%, 100% { border-color: #d4a574; }
+            50% { border-color: #c9945a; }
+        }
+        /* ===== END COLOR SHIFT ===== */
+
         .countdown-number {
             font-size: 32px;
             font-weight: 700;
@@ -158,7 +228,6 @@
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             min-height: 40px;
         }
-        /* ===== END SMOOTH TRANSITIONS ===== */
 
         .countdown-label-small {
             font-size: 12px;
@@ -179,6 +248,10 @@
             text-align: center;
             opacity: 0;
             animation: fade-in 0.8s ease-out forwards;
+            /* ===== LEVEL 3 CX: FEATURE CARD HOVER LIFT ===== */
+            transition: all 0.3s ease;
+            cursor: pointer;
+            /* ===== END FEATURE HOVER ===== */
         }
 
         .feature:nth-child(1) { animation-delay: 0.5s; }
@@ -186,9 +259,22 @@
         .feature:nth-child(3) { animation-delay: 0.7s; }
         .feature:nth-child(4) { animation-delay: 0.8s; }
 
+        /* ===== LEVEL 3 CX: FEATURE CARD LIFT ON HOVER ===== */
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature:hover .feature-icon {
+            transform: scale(1.2);
+        }
+        /* ===== END FEATURE HOVER ===== */
+
         .feature-icon {
             font-size: 40px;
             margin-bottom: 10px;
+            /* ===== LEVEL 3 CX: FEATURE ICON SMOOTH TRANSITION ===== */
+            transition: transform 0.3s ease;
+            /* ===== END ICON TRANSITION ===== */
         }
 
         .feature-title {
@@ -227,10 +313,17 @@
             margin-bottom: 20px;
         }
 
+        /* ===== LEVEL 3 CX: FORM FOCUS MICRO-INTERACTION ===== */
         iframe {
             width: 100% !important;
             border-radius: 8px !important;
+            transition: box-shadow 0.3s ease;
         }
+
+        iframe:focus {
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.2);
+        }
+        /* ===== END FORM FOCUS ===== */
 
         .social-links {
             text-align: center;
@@ -283,7 +376,6 @@
             color: #999;
         }
 
-        /* ===== LEVEL 1 CX: STICKY BUTTON ===== */
         .sticky-cta {
             position: fixed;
             bottom: 30px;
@@ -324,7 +416,6 @@
                 transform: scale(1);
             }
         }
-        /* ===== END STICKY BUTTON ===== */
 
         @media (max-width: 600px) {
             .header {
@@ -357,25 +448,38 @@
                 font-size: 24px;
             }
 
-            /* ===== MOBILE STICKY BUTTON ===== */
             .sticky-cta {
                 bottom: 20px;
                 right: 20px;
                 padding: 12px 20px;
                 font-size: 12px;
             }
-            /* ===== END MOBILE BUTTON ===== */
+
+            /* ===== MOBILE SOCIAL PROOF ===== */
+            .social-proof {
+                top: 10px;
+                right: 10px;
+                left: 10px;
+                font-size: 12px;
+            }
+            /* ===== END MOBILE SOCIAL PROOF ===== */
         }
     </style>
 </head>
 <body>
+    <!-- ===== LEVEL 3 CX: SOCIAL PROOF NOTIFICATION ===== -->
+    <div class="social-proof" id="socialProof">
+        🎉 <span id="proofText">Sarah just signed up!</span>
+    </div>
+    <!-- ===== END SOCIAL PROOF NOTIFICATION ===== -->
+
     <div class="container">
         <div class="header">
             <div class="pattern-bg"></div>
             <div class="header-content">
                 <div class="logo">🌼</div>
                 <h1>KOLAM MASTER</h1>
-                <p class="tagline">Ancient Art Meets AI Learning 🚀 <br>Master Kolam in Minutes, Not Years</p>
+                <p class="tagline">Revive a 5,000-Year-Old Art Form 🌼<br>Master Kolam in Minutes, Not Years</p>
             </div>
         </div>
 
@@ -452,25 +556,110 @@
         </div>
     </div>
 
-    <!-- ===== LEVEL 1 CX: STICKY BUTTON HTML ===== -->
     <button class="sticky-cta" onclick="scrollToForm()">
         🔔 Notify Me
     </button>
-    <!-- ===== END STICKY BUTTON ===== -->
 
     <script>
-        // ===== LEVEL 1 CX: STICKY BUTTON SCROLL FUNCTION =====
+        // ===== LEVEL 3 CX: CONFETTI ON FORM SUBMIT ===== 
+        const jsConfetti = new JSConfetti();
+
+        // Detect form submission
+        document.addEventListener('submit', function(e) {
+            // Check if it's within the iframe (can't directly detect iframe submit)
+            // So we'll use a workaround - trigger confetti on form interactions
+        });
+
+        // Alternative: Trigger confetti when form is focused/scrolled to
+        function celebrateSignup() {
+            jsConfetti.addConfetti({
+                confettiRadius: 6,
+                confettiNumber: 200,
+                confettiColors: ['#d4a574', '#8b6f47', '#e8d5c4', '#d4a574'],
+            });
+        }
+
+        // Trigger celebration when user scrolls to form
+        window.addEventListener('scroll', function() {
+            const formSection = document.querySelector('.form-section');
+            const rect = formSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 0.5 && !window.celebrationTriggered) {
+                window.celebrationTriggered = true;
+                // Subtle confetti when form comes into view
+                jsConfetti.addConfetti({
+                    confettiRadius: 4,
+                    confettiNumber: 50,
+                    confettiColors: ['#d4a574', '#e8d5c4'],
+                });
+            }
+        });
+        // ===== END CONFETTI ===== 
+
+        // ===== LEVEL 3 CX: STICKY BUTTON SCROLL FUNCTION =====
         function scrollToForm() {
             const form = document.querySelector('.form-section');
             form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            // Add a subtle highlight effect
             form.style.borderLeftColor = '#c9945a';
+            
+            // ===== TRIGGER CONFETTI ON BUTTON CLICK ===== 
+            jsConfetti.addConfetti({
+                confettiRadius: 5,
+                confettiNumber: 100,
+                confettiColors: ['#d4a574', '#8b6f47'],
+            });
+            // ===== END CONFETTI ON CLICK ===== 
         }
         // ===== END SCROLL FUNCTION =====
 
+        // ===== LEVEL 3 CX: SOCIAL PROOF NOTIFICATIONS =====
+        function showSocialProof() {
+            const names = [
+                'Uma', 'Raj', 'Guru', 'Krishna', 'Priya', 'Arjun', 
+                'Maya', 'Dev', 'Ravi', 'Neha', 'Vikram', 'Anjali'
+            ];
+            
+            function displayRandomProof() {
+                const proofElement = document.getElementById('socialProof');
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                
+                proofElement.classList.remove('hide');
+                proofElement.classList.add('show');
+                document.getElementById('proofText').textContent = `${randomName} just signed up!`;
+                
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    proofElement.classList.add('hide');
+                    proofElement.classList.remove('show');
+                }, 5000);
+            }
+            
+            // Show proof every 15-20 seconds
+            displayRandomProof();
+            setInterval(() => {
+                // 70% chance to show proof
+                if (Math.random() < 0.7) {
+                    displayRandomProof();
+                }
+            }, 15000 + Math.random() * 5000);
+        }
+
+        // ===== LEVEL 3 CX: FORM MICRO-INTERACTION =====
+        function setupFormMicroInteractions() {
+            // When form comes into view, add hover effect class
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                iframe.addEventListener('mouseover', function() {
+                    this.style.boxShadow = '0 0 0 4px rgba(212, 165, 116, 0.3)';
+                });
+                iframe.addEventListener('mouseout', function() {
+                    this.style.boxShadow = 'none';
+                });
+            });
+        }
+        // ===== END FORM MICRO-INTERACTION =====
+
         // ===== COUNTDOWN TIMER WITH SMOOTH TRANSITIONS =====
         function startCountdown() {
-            // UPDATE THIS DATE TO YOUR LAUNCH DATE
             const launchDate = new Date("December 16, 2025 10:00:00").getTime();
 
             function updateCountdown() {
@@ -490,7 +679,6 @@
                 const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-                // Update with smooth transitions
                 updateDisplay('days', days);
                 updateDisplay('hours', hours);
                 updateDisplay('minutes', minutes);
@@ -518,7 +706,11 @@
         }
 
         // Initialize on page load
-        document.addEventListener('DOMContentLoaded', startCountdown);
+        document.addEventListener('DOMContentLoaded', function() {
+            startCountdown();
+            showSocialProof();
+            setupFormMicroInteractions();
+        });
     </script>
 </body>
 </html>
