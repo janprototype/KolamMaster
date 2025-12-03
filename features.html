@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Kolam Master App</title>
+    <meta name="description"
+        content="Explore all the features of Kolam Master: AI-powered feedback, step-by-step tutorials, progress tracking, and more. Everything you need to master Kolam drawing.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+            line-height: 1.7;
+            color: #2c3e50;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 22px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            color: #8b6f47;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            color: #555;
+            font-size: 15px;
+        }
+
+        .feature-list li:before {
+            content: "✓ ";
+            color: #d4a574;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #8b6f47;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>🎨 Powerful Features for Mastering Kolam</h1>
+            <p class="subtitle">Everything you need to learn, practice, and master this ancient art form</p>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🤖</span>
+                <h3>AI-Powered Validation</h3>
+                <p>Get instant, expert-level feedback on your drawings powered by Google Gemini AI.</p>
+                <ul class="feature-list">
+                    <li>Real-time stroke analysis</li>
+                    <li>Pattern accuracy scoring</li>
+                    <li>Personalized improvement suggestions</li>
+                    <li>Detailed strengths assessment</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">📚</span>
+                <h3>Step-by-Step Tutorials</h3>
+                <p>Learn from animated demonstrations showing exactly how to create each pattern.</p>
+                <ul class="feature-list">
+                    <li>Animated stroke sequences</li>
+                    <li>Beginner to advanced levels</li>
+                    <li>Traditional authentic patterns</li>
+                    <li>Cultural context and meaning</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🎯</span>
+                <h3>Interactive Practice Canvas</h3>
+                <p>Draw directly on your device with professional-grade tools designed for Kolam.</p>
+                <ul class="feature-list">
+                    <li>Smooth, responsive drawing</li>
+                    <li>Adjustable brush sizes</li>
+                    <li>Color customization</li>
+                    <li>Undo/redo functionality</li>
+                    <li>Grid overlay options</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">📊</span>
+                <h3>Progress Tracking</h3>
+                <p>Monitor your improvement with detailed analytics and achievement milestones.</p>
+                <ul class="feature-list">
+                    <li>Skill level progression</li>
+                    <li>Patterns completed tracker</li>
+                    <li>Accuracy improvement graphs</li>
+                    <li>Achievement badges</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🎨</span>
+                <h3>Design Library</h3>
+                <p>Access hundreds of traditional Kolam patterns organized by difficulty and style.</p>
+                <ul class="feature-list">
+                    <li>300+ authentic designs</li>
+                    <li>Categorized by complexity</li>
+                    <li>Search and filter options</li>
+                    <li>Favorites collection</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">💾</span>
+                <h3>Save & Share Creations</h3>
+                <p>Save your artwork and share your progress with friends and family.</p>
+                <ul class="feature-list">
+                    <li>Cloud storage integration</li>
+                    <li>Export high-quality images</li>
+                    <li>Social media sharing</li>
+                    <li>Personal gallery</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🌙</span>
+                <h3>Offline Mode</h3>
+                <p>Practice anytime, anywhere—no internet connection required.</p>
+                <ul class="feature-list">
+                    <li>Download patterns for offline use</li>
+                    <li>Practice without connectivity</li>
+                    <li>Sync progress when online</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🔄</span>
+                <h3>Multi-Device Sync</h3>
+                <p>Seamlessly continue your learning across all your devices.</p>
+                <ul class="feature-list">
+                    <li>Cloud synchronization</li>
+                    <li>Cross-platform support</li>
+                    <li>Progress saved automatically</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🎓</span>
+                <h3>Adaptive Learning</h3>
+                <p>AI adjusts difficulty based on your performance for optimal learning.</p>
+                <ul class="feature-list">
+                    <li>Personalized difficulty curve</li>
+                    <li>Smart pattern recommendations</li>
+                    <li>Skill-based unlocks</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">💡</span>
+                <h3>Contextual Hints</h3>
+                <p>Get helpful guidance when you're stuck without spoiling the challenge.</p>
+                <ul class="feature-list">
+                    <li>Smart hint system</li>
+                    <li>Progressive difficulty hints</li>
+                    <li>Visual guides</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🌍</span>
+                <h3>Cultural Education</h3>
+                <p>Learn the rich history and significance behind each pattern.</p>
+                <ul class="feature-list">
+                    <li>Pattern origins and meanings</li>
+                    <li>Cultural context</li>
+                    <li>Traditional practices</li>
+                    <li>Regional variations</li>
+                </ul>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">♿</span>
+                <h3>Accessibility Features</h3>
+                <p>Designed to be inclusive and accessible to all learners.</p>
+                <ul class="feature-list">
+                    <li>Adjustable interface sizes</li>
+                    <li>High contrast modes</li>
+                    <li>Screen reader support</li>
+                    <li>Left/right hand modes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Experience All These Features?</h2>
+            <p style="font-size: 20px; margin: 20px 0;">Join thousands learning Kolam with the most comprehensive app
+                available.</p>
+            <a href="index.html#signup" class="cta-button">🌼 Get Early Access</a>
+        </div>
+    </div>
+</body>
+
+</html>

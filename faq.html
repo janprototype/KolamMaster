@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Kolam Master</title>
+    <meta name="description"
+        content="Frequently asked questions about Kolam Master app. Learn about features, pricing, compatibility, and how to get started with AI-powered Kolam learning.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+            line-height: 1.7;
+            color: #2c3e50;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 22px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .faq-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-category {
+            margin-bottom: 40px;
+        }
+
+        .faq-category h2 {
+            color: #8b6f47;
+            font-size: 28px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #f5e6d3;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f4f0;
+            border-radius: 10px;
+            border-left: 4px solid #d4a574;
+        }
+
+        .faq-question {
+            color: #8b6f47;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .faq-answer ul {
+            margin: 10px 0 10px 25px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 8px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #8b6f47;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .faq-section {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>❓ Frequently Asked Questions</h1>
+            <p class="subtitle">Everything you need to know about Kolam Master</p>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="faq-section">
+            <!-- Getting Started -->
+            <div class="faq-category">
+                <h2>🚀 Getting Started</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">What is Kolam Master?</div>
+                    <div class="faq-answer">Kolam Master is an AI-powered mobile app that teaches you how to create
+                        traditional South Indian Kolam patterns. It combines step-by-step tutorials with real-time AI
+                        feedback to help you master this 5,000-year-old art form faster than traditional learning
+                        methods.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do I need any drawing experience?</div>
+                    <div class="faq-answer">No! Kolam Master is designed for complete beginners. Our AI-guided lessons
+                        start with simple patterns and gradually increase in complexity as you improve. Whether you've
+                        never drawn before or you're an experienced artist, you'll find appropriate challenges.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I get started?</div>
+                    <div class="faq-answer">Simply sign up for early access on our homepage, download the app when it
+                        launches, create your account, and start with the beginner tutorials. The app will guide you
+                        through everything step-by-step.</div>
+                </div>
+            </div>
+
+            <!-- Features & Functionality -->
+            <div class="faq-category">
+                <h2>✨ Features & Functionality</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">How does the AI feedback work?</div>
+                    <div class="faq-answer">Our AI, powered by Google Gemini, analyzes your drawing by comparing it to
+                        reference patterns. It evaluates stroke accuracy, pattern completion, symmetry, and technique,
+                        then provides personalized suggestions for improvement. You get instant feedback on what you're
+                        doing well and specific areas to focus on.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I practice offline?</div>
+                    <div class="faq-answer">Yes! You can download patterns for offline practice. Your progress will be
+                        saved locally and synced to the cloud when you're back online. Note that AI validation requires
+                        an internet connection.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How many Kolam patterns are included?</div>
+                    <div class="faq-answer">The app includes over 300 traditional Kolam patterns, ranging from simple
+                        beginner designs to complex advanced patterns. New patterns are added regularly based on user
+                        requests and cultural research.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I create my own designs?</div>
+                    <div class="faq-answer">Yes! Once you've mastered the basics, you can use the freehand drawing mode
+                        to create your own Kolam designs. You can save them to your personal gallery and share them with
+                        the community.</div>
+                </div>
+            </div>
+
+            <!-- Technical -->
+            <div class="faq-category">
+                <h2>📱 Technical Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">What devices are supported?</div>
+                    <div class="faq-answer">Kolam Master is available for:
+                        <ul>
+                            <li>iOS devices (iPhone and iPad) running iOS 13 or later</li>
+                            <li>Android devices running Android 8.0 or later</li>
+                            <li>Tablets are especially recommended for the best drawing experience</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do I need a stylus?</div>
+                    <div class="faq-answer">No, you can draw with your finger. However, a stylus (like Apple Pencil or
+                        any capacitive stylus) provides more precision and a more natural drawing experience, especially
+                        for detailed patterns.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How much storage space does the app require?</div>
+                    <div class="faq-answer">The base app is approximately 150MB. Additional space is needed for
+                        downloaded patterns and saved drawings, typically 200-500MB depending on usage.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I use the app on multiple devices?</div>
+                    <div class="faq-answer">Yes! Your account syncs across all your devices. You can start practicing on
+                        your phone and continue on your tablet, with all your progress automatically saved.</div>
+                </div>
+            </div>
+
+            <!-- Pricing & Plans -->
+            <div class="faq-category">
+                <h2>💰 Pricing & Plans</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is Kolam Master free?</div>
+                    <div class="faq-answer">The app offers a free tier with access to basic patterns and limited AI
+                        validations per month. Premium subscription unlocks all patterns, unlimited AI feedback,
+                        advanced features, and priority support. Pricing details will be announced at launch.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is there a free trial?</div>
+                    <div class="faq-answer">Yes! New users get a 14-day free trial of the premium features. No credit
+                        card required to start the trial.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I cancel my subscription anytime?</div>
+                    <div class="faq-answer">Absolutely. You can cancel your subscription at any time from your account
+                        settings. You'll retain premium access until the end of your current billing period.</div>
+                </div>
+            </div>
+
+            <!-- Learning & Progress -->
+            <div class="faq-category">
+                <h2>📚 Learning & Progress</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">How long does it take to learn Kolam?</div>
+                    <div class="faq-answer">It varies by individual, but most users achieve basic proficiency in 2-3
+                        weeks with regular practice (15-30 minutes daily). Intermediate skills typically develop in 4-6
+                        weeks, and advanced mastery in 2-3 months. This is significantly faster than traditional
+                        learning methods.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How often should I practice?</div>
+                    <div class="faq-answer">We recommend practicing 15-30 minutes daily for best results. Consistent
+                        short sessions are more effective than occasional long sessions. The app tracks your practice
+                        streaks and sends gentle reminders.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What if I get stuck on a pattern?</div>
+                    <div class="faq-answer">The app provides multiple support options:
+                        <ul>
+                            <li>Contextual hints that guide without spoiling</li>
+                            <li>Slow-motion animation playback</li>
+                            <li>Step-by-step breakdowns</li>
+                            <li>AI suggestions for common mistakes</li>
+                            <li>Community forums for peer support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cultural & Educational -->
+            <div class="faq-category">
+                <h2>🌏 Cultural & Educational</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">Are these authentic traditional patterns?</div>
+                    <div class="faq-answer">Yes! All patterns in Kolam Master are based on authentic traditional
+                        designs, researched and verified by cultural experts. We work with Kolam practitioners and
+                        cultural organizations to ensure authenticity and respect for the art form's heritage.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do I need to be South Indian to learn Kolam?</div>
+                    <div class="faq-answer">Not at all! Kolam is a beautiful art form that anyone can learn and
+                        appreciate. The app provides cultural context and history to help all learners understand and
+                        respect the tradition, regardless of their background.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I learn about the cultural significance?</div>
+                    <div class="faq-answer">Yes! Each pattern includes information about its cultural meaning,
+                        traditional uses, regional variations, and historical context. We believe understanding the
+                        "why" enriches the learning experience.</div>
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="faq-category">
+                <h2>💬 Support</h2>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I get help if I have issues?</div>
+                    <div class="faq-answer">We offer multiple support channels:
+                        <ul>
+                            <li>In-app help center with searchable articles</li>
+                            <li>Email support: support@kolammaster.com</li>
+                            <li>Community forums</li>
+                            <li>Social media (@kolammaster)</li>
+                            <li>Video tutorials on YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I suggest new features or patterns?</div>
+                    <div class="faq-answer">Absolutely! We love hearing from our users. You can submit feature requests
+                        and pattern suggestions through the app's feedback form or by emailing us. Many of our best
+                        features came from user suggestions.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Still Have Questions?</h2>
+            <p style="font-size: 18px; margin: 20px 0;">Join our community and get your questions answered!</p>
+            <a href="index.html#signup" class="cta-button">🌼 Sign Up for Early Access</a>
+            <p style="margin-top: 20px; font-size: 16px; opacity: 0.9;">Or follow us on social media for updates and
+                tips</p>
+        </div>
+    </div>
+</body>
+
+</html>

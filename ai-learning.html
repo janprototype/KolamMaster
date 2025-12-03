@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Kolam Learning - Master Ancient Art with Modern Technology</title>
+    <meta name="description"
+        content="Discover how artificial intelligence revolutionizes Kolam learning. Get real-time feedback, personalized guidance, and master this 5,000-year-old art form faster than ever before.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c4 100%);
+            line-height: 1.7;
+            color: #2c3e50;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+            animation: parallax-subtle 20s ease-in-out infinite;
+        }
+
+        @keyframes parallax-subtle {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 22px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #8b6f47;
+            font-size: 36px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #f5e6d3;
+        }
+
+        .section h3 {
+            color: #a68968;
+            font-size: 24px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            color: #555;
+        }
+
+        .intro-text {
+            font-size: 20px;
+            color: #8b6f47;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff9f0 0%, #fef5eb 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #d4a574;
+            margin: 30px 0;
+        }
+
+        .highlight-box h3 {
+            color: #8b6f47;
+            margin-top: 0;
+        }
+
+        .ai-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .ai-feature-card {
+            background: #f8f4f0;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #d4a574;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .ai-feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-left-color: #c9945a;
+        }
+
+        .ai-feature-card .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .ai-feature-card h3 {
+            color: #8b6f47;
+            font-size: 22px;
+            margin: 0 0 15px 0;
+        }
+
+        .ai-feature-card p {
+            font-size: 16px;
+            color: #666;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .ai-feature-card .benefit {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e8d5c4;
+            font-size: 14px;
+            color: #8b6f47;
+            font-weight: 600;
+        }
+
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .step-card {
+            background: linear-gradient(135deg, #fff9f0 0%, #fef5eb 100%);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: scale(1.05);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+
+        .step-card h4 {
+            color: #8b6f47;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .step-card p {
+            font-size: 15px;
+            color: #666;
+            margin: 0;
+        }
+
+        .learning-journey {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .journey-stage {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            border: 3px solid #d4a574;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .journey-stage:hover {
+            border-color: #c9945a;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .journey-stage .stage-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .journey-stage h4 {
+            color: #8b6f47;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .journey-stage p {
+            font-size: 15px;
+            color: #666;
+            margin: 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid #f5e6d3;
+            font-size: 16px;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table .traditional {
+            color: #999;
+        }
+
+        .comparison-table .ai-powered {
+            color: #8b6f47;
+            font-weight: 600;
+        }
+
+        .testimonial {
+            background: #f8f4f0;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #d4a574;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .testimonial p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .testimonial .author {
+            font-style: normal;
+            font-weight: 600;
+            color: #8b6f47;
+            font-size: 16px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: white;
+            color: #8b6f47;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .section {
+                padding: 30px 25px;
+            }
+
+            .section h2 {
+                font-size: 28px;
+            }
+
+            .ai-features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .learning-journey {
+                flex-direction: column;
+            }
+
+            .comparison-table {
+                font-size: 14px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 15px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>🤖 Master Kolam with AI-Powered Guidance</h1>
+            <p class="subtitle">Ancient Art Meets Cutting-Edge Technology<br>
+                Learn in Weeks What Traditionally Takes Years</p>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Introduction -->
+        <div class="section">
+            <p class="intro-text">Imagine having a patient, expert teacher available 24/7, analyzing every stroke you
+                make and providing instant, personalized feedback. That's the power of AI-assisted Kolam learning.</p>
+
+            <p>For thousands of years, mastering Kolam required years of practice under the guidance of experienced
+                practitioners. Today, artificial intelligence transforms this journey, accelerating your learning while
+                preserving the art's sacred essence and cultural authenticity.</p>
+
+            <p>Kolam Master combines ancient wisdom with modern AI technology to create the most effective Kolam
+                learning experience ever developed.</p>
+        </div>
+
+        <!-- The AI Advantage -->
+        <div class="section">
+            <h2>🚀 The AI Advantage</h2>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Learning Aspect</th>
+                        <th>Traditional Method</th>
+                        <th>AI-Powered Learning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Feedback Speed</strong></td>
+                        <td class="traditional">Days or weeks between lessons</td>
+                        <td class="ai-powered">✓ Instant, real-time feedback</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Personalization</strong></td>
+                        <td class="traditional">One-size-fits-all instruction</td>
+                        <td class="ai-powered">✓ Adapts to your skill level</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Practice Time</strong></td>
+                        <td class="traditional">Limited by teacher availability</td>
+                        <td class="ai-powered">✓ Practice anytime, anywhere</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Progress Tracking</strong></td>
+                        <td class="traditional">Subjective assessment</td>
+                        <td class="ai-powered">✓ Detailed metrics and analytics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mistake Correction</strong></td>
+                        <td class="traditional">May go unnoticed</td>
+                        <td class="ai-powered">✓ Immediate identification and guidance</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Learning Curve</strong></td>
+                        <td class="traditional">Years to master</td>
+                        <td class="ai-powered">✓ Weeks to proficiency</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box">
+                <h3>💡 The Best of Both Worlds</h3>
+                <p>AI doesn't replace traditional learning—it enhances it. You still learn authentic patterns,
+                    traditional techniques, and cultural significance. AI simply accelerates your journey by providing
+                    expert-level feedback that would traditionally require years of mentorship.</p>
+            </div>
+        </div>
+
+        <!-- Key AI Features -->
+        <div class="section">
+            <h2>🎯 Intelligent Features That Transform Learning</h2>
+
+            <div class="ai-features-grid">
+                <div class="ai-feature-card">
+                    <span class="icon">✨</span>
+                    <h3>Real-Time Stroke Validation</h3>
+                    <p>As you draw each line, our AI analyzes your stroke placement, curvature, and symmetry. Get
+                        instant visual feedback showing exactly where to improve.</p>
+                    <div class="benefit">⚡ Learn correct technique from your very first stroke</div>
+                </div>
+
+                <div class="ai-feature-card">
+                    <span class="icon">🎓</span>
+                    <h3>Intelligent Feedback System</h3>
+                    <p>Receive personalized suggestions based on your specific drawing. AI identifies your strengths
+                        and areas for improvement, providing actionable tips tailored to your skill level.</p>
+                    <div class="benefit">📈 Accelerate improvement with targeted guidance</div>
+                </div>
+
+                <div class="ai-feature-card">
+                    <span class="icon">🔍</span>
+                    <h3>Advanced Pattern Recognition</h3>
+                    <p>AI compares your drawing to reference patterns with pixel-perfect precision, identifying subtle
+                        differences you might miss. Understand exactly how your work compares to traditional designs.
+                    </p>
+                    <div class="benefit">🎯 Achieve authentic, accurate patterns faster</div>
+                </div>
+
+                <div class="ai-feature-card">
+                    <span class="icon">📊</span>
+                    <h3>Progress Tracking & Analytics</h3>
+                    <p>AI monitors your skill development over time, tracking metrics like stroke accuracy, pattern
+                        completion rate, and technique improvement. Visualize your journey from beginner to master.</p>
+                    <div class="benefit">🏆 Stay motivated with clear progress indicators</div>
+                </div>
+
+                <div class="ai-feature-card">
+                    <span class="icon">🧠</span>
+                    <h3>Adaptive Learning Path</h3>
+                    <p>The AI adjusts difficulty based on your performance, ensuring you're always challenged but never
+                        overwhelmed. Unlock new patterns as you demonstrate mastery of current skills.</p>
+                    <div class="benefit">🎯 Learn at the perfect pace for you</div>
+                </div>
+
+                <div class="ai-feature-card">
+                    <span class="icon">💬</span>
+                    <h3>Contextual Hints & Tips</h3>
+                    <p>Stuck on a particular pattern? AI provides context-aware hints that guide you without giving
+                        away the solution, helping you develop problem-solving skills alongside drawing technique.</p>
+                    <div class="benefit">🧩 Build confidence through guided discovery</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="section">
+            <h2>⚙️ How AI-Powered Learning Works</h2>
+
+            <div class="how-it-works">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>Choose Your Design</h4>
+                    <p>Select from hundreds of traditional Kolam patterns, organized by difficulty level and style.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>Follow Step-by-Step</h4>
+                    <p>Watch animated demonstrations showing exactly how to create each stroke in the correct sequence.
+                    </p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4>Draw & Practice</h4>
+                    <p>Use your finger or stylus to recreate the pattern on your device's screen with intuitive drawing
+                        tools.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h4>Get AI Feedback</h4>
+                    <p>Tap "Validate with AI" to receive detailed analysis comparing your drawing to the reference
+                        pattern.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h4>Review & Improve</h4>
+                    <p>Study AI-generated feedback highlighting strengths and specific areas to refine in your next
+                        attempt.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h4>Track Progress</h4>
+                    <p>Watch your skills grow with detailed analytics showing improvement across multiple dimensions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🔬 Powered by Google Gemini AI</h3>
+                <p>Kolam Master uses Google's advanced Gemini AI model, trained on thousands of traditional Kolam
+                    patterns. This cutting-edge technology provides feedback comparable to expert human instructors,
+                    analyzing your work with incredible precision and offering insights that accelerate your learning
+                    journey.</p>
+            </div>
+        </div>
+
+        <!-- Learning Journey -->
+        <div class="section">
+            <h2>🌱 Your AI-Guided Learning Journey</h2>
+
+            <div class="learning-journey">
+                <div class="journey-stage">
+                    <div class="stage-icon">🌱</div>
+                    <h4>Beginner (Week 1-2)</h4>
+                    <p><strong>Focus:</strong> Basic dots, simple lines, fundamental patterns</p>
+                    <p><strong>AI Support:</strong> Step-by-step guidance, stroke-by-stroke validation, encouraging
+                        feedback</p>
+                    <p><strong>Outcome:</strong> Confidence in basic techniques, understanding of grid systems</p>
+                </div>
+
+                <div class="journey-stage">
+                    <div class="stage-icon">🌿</div>
+                    <h4>Intermediate (Week 3-6)</h4>
+                    <p><strong>Focus:</strong> Complex curves, symmetry, multi-step patterns</p>
+                    <p><strong>AI Support:</strong> Precision analysis, symmetry checking, pattern completion tracking
+                    </p>
+                    <p><strong>Outcome:</strong> Ability to create traditional designs independently</p>
+                </div>
+
+                <div class="journey-stage">
+                    <div class="stage-icon">🌳</div>
+                    <h4>Advanced (Week 7+)</h4>
+                    <p><strong>Focus:</strong> Intricate designs, creative variations, speed and fluidity</p>
+                    <p><strong>AI Support:</strong> Advanced technique refinement, style consistency analysis, creative
+                        suggestions</p>
+                    <p><strong>Outcome:</strong> Mastery of traditional patterns, ability to create original designs
+                    </p>
+                </div>
+            </div>
+
+            <p style="text-align: center; margin-top: 30px; font-size: 18px; color: #8b6f47;">
+                <strong>Most users achieve intermediate proficiency in just 4-6 weeks with regular practice!</strong>
+            </p>
+        </div>
+
+        <!-- Success Stories -->
+        <!-- COMMENTED OUT UNTIL APP LAUNCH
+        <div class="section">
+            <h2>💬 What Learners Are Saying</h2>
+
+            <div class="testimonial">
+                <p>"I've been trying to learn Kolam for years, watching my grandmother create beautiful patterns. With
+                    Kolam Master's AI feedback, I finally understood what I was doing wrong. In just three weeks, I
+                    created my first complete design that made my grandmother proud!"</p>
+                <div class="author">— Priya S., San Francisco</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"As someone with no artistic background, I was intimidated by Kolam. The AI guidance broke
+                    everything down into manageable steps and gave me confidence. The instant feedback is like having a
+                    patient teacher by my side 24/7."</p>
+                <div class="author">— Raj M., London</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"I wanted to teach my children about our cultural heritage, but I'm not skilled at Kolam myself.
+                    This app lets us learn together! The AI makes it fun and educational, and my kids love seeing their
+                    progress scores improve."</p>
+                <div class="author">— Anjali K., Toronto</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"The pattern recognition is incredibly accurate. It catches mistakes I would never have noticed on my
+                    own. I've improved more in two months with this app than in two years of occasional practice."</p>
+                <div class="author">— Vikram D., Singapore</div>
+            </div>
+        </div>
+        -->
+
+        <!-- Why AI Matters -->
+        <div class="section">
+            <h2>🌟 Why AI-Powered Learning Matters</h2>
+
+            <h3>Preserving Cultural Heritage</h3>
+            <p>As fewer people learn traditional Kolam from family elders, AI ensures this 5,000-year-old art form
+                doesn't fade away. By making learning accessible and effective, we're helping preserve cultural
+                knowledge for future generations.</p>
+
+            <h3>Democratizing Access</h3>
+            <p>Not everyone has access to experienced Kolam teachers. AI brings expert-level instruction to anyone with
+                a smartphone or tablet, anywhere in the world, breaking down geographical and cultural barriers.</p>
+
+            <h3>Accelerating Mastery</h3>
+            <p>Traditional learning requires years of practice and mentorship. AI compresses this timeline by providing
+                immediate, precise feedback on every attempt, allowing you to iterate and improve exponentially faster.
+            </p>
+
+            <h3>Building Confidence</h3>
+            <p>Many people give up on learning Kolam because they don't see progress or receive constructive feedback.
+                AI provides encouraging, specific guidance that builds confidence and maintains motivation throughout
+                your learning journey.</p>
+
+            <div class="highlight-box">
+                <h3>🎯 The Result: Authentic Mastery, Faster</h3>
+                <p>AI doesn't teach you shortcuts or simplified versions. You learn authentic, traditional Kolam
+                    patterns and techniques—just faster and more effectively than ever before possible. The art form
+                    remains pure; the learning process becomes optimized.</p>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2>Ready to Experience AI-Powered Kolam Learning?</h2>
+            <p>Join thousands of learners who are mastering this ancient art form with modern technology.</p>
+            <p>Download Kolam Master and start your journey from beginner to master—guided by AI every step of the way.
+            </p>
+            <a href="index.html#signup" class="cta-button">🌼 Get Early Access</a>
+            <p style="margin-top: 30px; font-size: 16px; opacity: 0.9;">
+                Limited spots available for our launch program. Sign up now to be among the first to experience
+                AI-powered Kolam learning.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
